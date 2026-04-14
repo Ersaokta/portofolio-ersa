@@ -8,22 +8,97 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            scroll-behavior: smooth;
-        }
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            color: white;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-        .card:hover {
-            transform: scale(1.05);
-            transition: 0.3s;
-        }
+       /* GLOBAL */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background: linear-gradient(to right, #000000, #412758);
+    color: white;
+}
+
+/* SEMUA SECTION */
+section {
+    background: transparent !important;
+    color: white;
+    padding: 80px 0;
+}
+
+/* HAPUS BACKGROUND PUTIH BOOTSTRAP */
+.bg-light {
+    background: transparent !important;
+}
+
+/* TEXT */
+h1, h2, h3, h4, h5, p, li {
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    transition: 0.3s;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0.8) !important;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: transparent; /* ikut body */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    color: white;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+.btn {
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* FOTO */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+/* FOOTER */
+footer {
+    background: transparent;
+    color: white;
+}
     </style>
 </head>
 <body>
@@ -41,6 +116,7 @@
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificate">Certificate</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -49,65 +125,81 @@
 
 <!-- HERO -->
 <section id="home" class="hero">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Halo, Saya Ersa 👋</h1>
-        <p class="lead">Siswa RPL | PKL di TVRI | Web Developer</p>
+    <div class="container text-center">
+        <img src="foto/ersa2.jpeg" class="profile-img" alt="foto ersa">
+        <h1 class="display-4 fw-bold">Halo, Saya Ersa Oktaviani👋</h1>
+        <p class="lead">Siswa Pengembangan Perangkat Lunak dan Gim (PPLG)</p>
+        <p>Web Developer Pemula</p>
         <a href="#project" class="btn btn-light mt-3">Lihat Project</a>
     </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-5">
+<section id="about" class="py-5" class="con">
     <div class="container">
         <h2 class="text-center mb-4">Tentang Saya</h2>
         <p class="text-center">
-            Saya siswa RPL yang fokus di bidang web development dan sedang menjalani PKL di TVRI.
+           Saya adalah Web Developer dan UI/UX Designer yang berfokus pada pembuatan website yang modern, responsif,dan user-friendly .
+           Saya memiliki minat dalam pengembangan web sebagai Web Developer pemula 
+           serta desain antarmuka dan pengalaman pengguna (UI/UX Designer).
+           Saya memiliki kemampuan dasar dalam HTML, CSS, Bootstrap, serta menggunakan Figma untuk merancang tampilan website 
+           yang menarik dan mudah digunakan. Saya memiliki semangat belajar yang tinggi dan suka belajar hal baru, memiliki ketelitian yang baik,
+           serta mampu bekerja secara individu maupun dalam tim dan selalu berusaha meningkatkan kemampuan di banyak bidang terutama bidang teknologi dan desain.
         </p>
 
         <div class="row mt-4">
             <div class="col-md-6">
-                <h4>Skill</h4>
+                <h4>Kemampuan</h4>
                 <ul>
                     <li>HTML, CSS, Bootstrap</li>
-                    <li>PHP & MySQL</li>
-                    <li>Laravel</li>
+                    <li>MySQL</li>
+                    <li>Figma</li>
+                    <li>Canva</li>
+                    <li>problem solving</li>
+                    <li>Team Work</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <h4>Pengalaman PKL</h4>
+                <h4>Pendidikan</h4>
                 <p>
-                    PKL di TVRI dengan tugas membuat dan mengembangkan aplikasi berbasis web.
+                    <li>SMK MAHAPUTRA CERDAS UTAMA</li>
+                    2024-2027
+                    <li>SMP Karya Bhakti</li>
+                    2021-2024
                 </p>
             </div>
         </div>
     </div>
 </section>
 
+
+
 <!-- PROJECT -->
-<section id="project" class="bg-light py-5">
-    <div class="container">
+<section id="project" class="bg-light py-5" class="con">
+    <div class="container1">
         <h2 class="text-center mb-4">Project Saya</h2>
 
         <div class="row">
 
             <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>Aplikasi Kasir ☕</h5>
-                    <p>Sistem penjualan & laporan otomatis.</p>
+                <div class="card shadow p-3" class="box">
+                    <h5>Project IoT Penjemur Otomatis</h5>
+                    <p>Penjemur otomatis berbasis IoT yang dapat membuka dan menutup secara otomatis 
+                       berdasarkan kondisi cuaca menggunakan sensor hujan.</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>Website Sekolah</h5>
-                    <p>Website informasi sekolah.</p>
+            <div class="col-md-4" class="box">
+                <div class="card shadow p-3">
+                    <h5>Aplikasi KasSaku</h5>
+                    <p>Aplikasi yang dibuat untuk mempermudah siswa untuk mencatat pengeluaran dan pemasukan kelas</p>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>CRUD Data</h5>
-                    <p>Aplikasi pengolahan data siswa.</p>
+            <div class="col-md-4" class="box">
+                <div class="card shadow p-3">
+                    <h5>CRUD Data Siswa</h5>
+                    <p>Aplikasi pengolahan data menggunakan MySQL.</p>
                 </div>
             </div>
 
@@ -115,22 +207,34 @@
     </div>
 </section>
 
+<!--CERTIFICATE-->
+<section id="certificate" class="bg-light py-5" class="con">
+    <div class="container1">
+        <h2 class="text-center mb-4">Certificate</h2>
+        <img src="foto/agate.jpeg" class="sertipikat-img" alt="agate">
+
 <!-- CONTACT -->
 <section id="contact" class="py-5">
     <div class="container text-center">
         <h2>Kontak</h2>
-        <p>Email: ersa@email.com</p>
-        <p>WhatsApp: 08xxxxxxxxxx</p>
+        <p>Email: sijeuniersa08@email.com</p>
+        <p>WhatsApp: 08131694669</p>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-dark text-white text-center p-3">
-    <p>© 2026 Portofolio Ersa</p>
+<footer class="text-center p-3">
+    <p>© 2026 Ersa Oktaviani | Portofolio</p>
 </footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 </body>
 </html>
